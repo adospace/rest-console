@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:AvaloniaEdit="https://github.com/avaloniaui/avaloniaedit"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RestConsole.DocumentEditor">
+  <Grid ColumnDefinitions="*, *">
+    <AvaloniaEdit:TextEditor x:Name="_sourceTextEditor"
+                              Grid.Column="0" Margin="0,0,3,0"
+                              FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+                              Foreground="#D4D4D4"
+                              HorizontalScrollBarVisibility="Auto"
+                              VerticalScrollBarVisibility="Auto"
+                              FontWeight="Light"
+                              FontSize="14"/>
+    
+    
+    <GridSplitter Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Right" Width="6"></GridSplitter>
+    <AvaloniaEdit:TextEditor x:Name="_outputTextEditor" 
+                             IsReadOnly="True"
+                             Grid.Column="1" 
+                             Margin="3,0,0,0"                             
+                             FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+                             Foreground="#D4D4D4"
+                             HorizontalScrollBarVisibility="Auto"
+                             VerticalScrollBarVisibility="Auto"
+                             FontWeight="Light"
+                             FontSize="14"/>
+
+  </Grid>
+</UserControl>
